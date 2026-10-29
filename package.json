@@ -1,0 +1,27 @@
+{
+  "name": "neon-market-mini-app",
+  "version": "1.0.0",
+  "description": "Неон Маркет — статический Telegram Mini App на Next.js 14: каталог товаров и Telegram-каналов с поиском, фильтрами, избранным и корзиной.",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "node --experimental-strip-types --no-warnings scripts/generate-assets.mjs && node scripts/generate-seo.mjs",
+    "build": "next build",
+    "preview": "node scripts/preview.mjs",
+    "typecheck": "tsc --noEmit",
+    "verify": "node --experimental-strip-types --no-warnings scripts/verify-build.mjs",
+    "test": "node --experimental-strip-types --no-warnings scripts/self-test.mjs"
+  },
+  "dependencies": {
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.4"
+  }
+}
